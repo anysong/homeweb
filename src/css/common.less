@@ -1,0 +1,495 @@
+body,
+html {
+    padding: 0px;
+    margin: 0px;
+    color: #545d69;
+    font-family: "SF Pro SC", "SF Pro Display", "SF Pro Icons", "PingFang SC", 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+#zhichiBtnBox {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    &.show {
+        opacity: 1;
+    }
+}
+
+@import "./common/telephone.less";
+@import "./common/topNav.less";
+button,
+input,
+ul,
+ol,
+p,
+span {
+    font-family: "SF Pro SC", "SF Pro Display", "SF Pro Icons", "PingFang SC", 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0px;
+    padding: 0px;
+}
+
+@global-font-color: #545d69;
+@nav-font-color: #6a7383;
+.common-waist {
+    width: 100%;
+    height: 342px;
+    background-position: center 0px;
+    padding-top: 1px;
+    text-align: center;
+    background-image: url(../images/waist-banner.png);
+    h1 {
+        text-align: center;
+        color: white;
+        font-weight: normal;
+        font-size: 30px;
+        margin-top: 109px;
+        margin-bottom: 45px;
+        &.mobile {
+            display: none;
+        }
+        em {
+            font-size: 14px;
+            font-style: normal;
+        }
+    }
+    button.btn {
+        height: 44px;
+        vertical-align: top;
+        margin-left: -6px;
+        width: 137px;
+        background-color: #3ff9f8;
+        font-size: 18px;
+        color: #0d848a;
+        border: 0px;
+        outline: none;
+        padding: 0px;
+        cursor: pointer;
+        border-radius: 0px 2px 2px 0px;
+        &:hover {
+            background-color: #27e1e0;
+        }
+    }
+    input {
+        height: 44px;
+        width: 347px;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none !important;
+            margin: 0;
+        }
+        &::-webkit-input-placeholder {
+            color: #d8d8d8;
+        }
+        font-size: 18px;
+        padding:0px;
+        padding-left: 14px;
+        outline: none;
+        border: 0px;
+        border-radius: 2px 0px 0px 2px;
+    }
+}
+
+.footer {
+    width: 100%;
+    height: 451px;
+    padding-top: 1px;
+    background-color: #505663;
+    background-position: center 0px;
+    font-size: 14px;
+    overflow: hidden;
+    background-image: url(../images/footer-banner.png);
+    .footer-inner {
+        width: 960px;
+        min-height: 100px;
+        margin: auto;
+        margin-top: 74px;
+        ul {
+            margin: 0px;
+            padding: 0px;
+            list-style-type: none;
+            list-style-position: inside;
+        }
+        .super-nav-mobile {
+            display: none;
+            li {
+                height: 30px;
+                line-height: 30px;
+                font-size: 12px;
+                text-align: center;
+                a {
+                    text-decoration: none;
+                    color: #9ea7b2;
+                }
+            }
+        }
+        .super-nav {
+            margin-left: 360px;
+            h4 {
+                font-size: 16px;
+                color: #ffffff;
+                margin-top: 0px;
+                font-weight: normal;
+            }
+            ul {
+                li {
+                    height: 30px;
+                    line-height: 30px;
+                    &:hover {
+                        a {
+                            color: white;
+                        }
+                    }
+                    a {
+                        color: #9ea7b2;
+                        text-decoration: none;
+                    }
+                }
+            }
+            >li {
+                &:first-child {
+                    margin-right: -107px;
+                }
+                width: 172px;
+                float: right;
+            }
+        }
+        .summary-info {
+            width: 277px;
+            float: left;
+        }
+        .summary-desc {
+            font-size: 16px;
+            color: #9ea7b2;
+            margin-top: 18px;
+        }
+        .summary-list {
+            margin: 0px;
+            padding: 0px;
+            margin-top: 45px;
+            list-style-type: none;
+            list-style-positin: none;
+            li {
+                height: 38px;
+                color: #9ea7b2;
+                line-height: 38px;
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+                i {
+                    display: inline-block;
+                    width: 27px;
+                    height: 22px;
+                    position: relative;
+                    margin-right: 9px;
+                    vertical-align: middle;
+                    z-index: 10;
+                    cursor: pointer;
+                    background-image: url(../images/major_spirite.png);
+                    &:hover {
+                        .qrcode-outer {
+                            display: block;
+                        }
+                    }
+                    .qrcode-outer {
+                        z-index: 100;
+                        display: none;
+                        position: absolute;
+                        height: 150px;
+                        width: 122px;
+                        background-color: white;
+                        text-align: center;
+                        top: -160px;
+                        left: -50px;
+                        &:after {
+                            content: " ";
+                            display: block;
+                            width: 0px;
+                            height: 0px;
+                            top: 150px;
+                            left: 50px;
+                            position: absolute;
+                            border: 10px solid transparent;
+                            border-top: 10px solid white;
+                        }
+                        .text {
+                            text-align: center;
+                            font-size: 14px;
+                            height: 32px;
+                            line-height: 32px;
+                            color: #a0a9b4;
+                            font-style: normal;
+                        }
+                    }
+                    &.tel {
+                        background-position: -85px -46px;
+                    }
+                    &.weixin {
+                        background-position: -47px -44px;
+                    }
+                }
+                &:first-child {
+                    color: white;
+                }
+            }
+        }
+        .logo-outer {
+            cursor: pointer;
+            height: 35px;
+            cursor: pointer;
+            height: 100%;
+            display: block;
+            width: 121px;
+            height: 32px;
+            background-position: -129px -68px;
+            background-image: url(../images/major_spirite.png);
+            img {
+                display: none;
+            }
+        }
+    }
+}
+
+.common-summary {
+    height: 60px;
+    background-color: #2f3542;
+    text-align: center;
+    line-height: 60px;
+    color: #69737f;
+    font-size: 14px;
+    i {
+        display: inline-block;
+        vertical-align: middle;
+        height: 29px;
+        width: 44px;
+        background-image: url(../images/major_spirite.png);
+        background-position-y: -71px;
+        background-position-x: -340px;
+        margin-left: 10px;
+        &:nth-child(2) {
+            width: 37px;
+            background-position-x: -300px;
+        }
+    }
+    img {
+        display: none;
+    }
+}
+
+.gray {
+    .sub-nav-outer-website {
+        background-color: #f9f9fb;
+    }
+}
+
+.sub-nav-outer-website {
+    width: 100%;
+    background-color: white;
+    padding: 100px 0px;
+    text-align: center;
+    h3 {
+        font-size: 24px;
+        color: #7b8390;
+        font-weight: normal;
+        text-align: center;
+        margin: 0px;
+    }
+    ul {
+        margin: 0px;
+        padding: 0px;
+        margin-top: 40px;
+        list-style-type: none;
+        list-style-position: inside;
+        &:after {
+            content: " ";
+            display: block;
+            height: 1px;
+            clear: both;
+            visibility: hidden;
+        }
+        li {
+            display: inline-block;
+            padding: 0px 20px;
+            border-radius: 2px;
+            height: 44px;
+            line-height: 44px;
+            &:hover {
+                background-color: #09aeb0;
+                a {
+                    color: white;
+                }
+            }
+            a {
+                text-decoration: none;
+                color: #09aeb0;
+            }
+        }
+    }
+}
+
+.grid-outer {
+    width: 960px;
+    min-height: 10px;
+    margin: auto;
+    padding-top: 1px;
+    margin-top: 50px;
+    &:after {
+        content: " ";
+        display: block;
+        height: 1px;
+        clear: both;
+        visibility: hidden;
+    }
+    .grid-column {
+        width: 220px;
+        margin-left: 25px;
+        height: 204px;
+        box-sizing: border-box;
+        float: left;
+        border: 1px solid #d5dce3;
+        border-radius: 2px;
+        position: relative;
+        margin-top: 27px;
+        padding-top: 1px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: border 0.2s ease-in-out;
+        &:hover {
+            box-shadow: 0px 0px 10px 1px rgba(189, 207, 207, 0.75);
+            border: 1px solid #09aeb0;
+            .desc {
+                top: 0px;
+            }
+        }
+        .desc {
+            position: absolute;
+            height: 100%;
+            transition: top 0.2s ease-in-out;
+            top: -105%;
+            padding: 16px 16px 0px 16px;
+            box-sizing: border-box;
+            width: 100%;
+            background-color: white;
+            font-size: 14px;
+            color: #7b8390;
+            line-height: 30px;
+            text-align: center;
+        }
+        .logo-outer {
+            width: 66px;
+            height: 50px;
+            margin: auto;
+            margin-top: 54px;
+            position: relative;
+            top: -11px;
+        }
+        .text {
+            width: 100%;
+            font-size: 18px;
+            position: absolute;
+            top: 125px;
+            color: #2f3542;
+            text-align: center;
+        }
+        &:first-child,
+        &:nth-child(4n+1) {
+            margin-left: 0px;
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    body,
+    html {
+        color: #2f3542;
+        font-size: 14px;
+    }
+    .footer {
+        background-image: url(../images/footer-banner-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
+        background-color: #474d5a;
+        height: 416px;
+        .footer-inner {
+            margin-top: 40px;
+            width: 100%;
+            .logo-outer {
+                margin: auto;
+                background-image: none;
+                img {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .super-nav {
+                display: none;
+            }
+            .super-nav-mobile {
+                display: block;
+                margin-top: 22px;
+            }
+            .summary-info {
+                width: 100%;
+                text-align: center;
+                float: none;
+                .summary-desc {
+                    font-size: 12px;
+                }
+                .summary-list {
+                    margin-top: 13px;
+                    li {
+                        &:first-child {
+                            display: block;
+                        }
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .common-waist {
+        background-size: cover;
+        height: 187px;
+        h1 {
+            display: none;
+            font-size: 19px;
+            &.mobile {
+                display: block;
+                margin-top: 50px;
+                margin-bottom: 25px;
+            }
+        }
+        input {
+            width: 50%;
+            height: 40px;
+            font-size: 14px;
+        }
+        button.btn {
+            font-size: 14px;
+            width: 30%;
+            height: 40px;
+        }
+    }
+    
+    .common-summary {
+        font-size: 11px;
+        height: 40px;
+        line-height: 40px;
+        i {
+            display: none;
+        }
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 5px;
+            height: 17px;
+        }
+    }
+}

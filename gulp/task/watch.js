@@ -8,4 +8,7 @@ gulp.task("watch", [], function(){
 	watch('./src/css/**/*.less',function(){
 		gulp.start("less");
 	});
+	watch('./src/**/*.html',function(){
+		gulp.start("includer");
+	});
 });
