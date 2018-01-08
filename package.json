@@ -17,6 +17,7 @@
     "url": "https://github.com/anysong/homeweb/issues"
   },
   "devDependencies": {
+    "exif": "^0.6.0",
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
     "gulp-clean-css": "^3.8.0",
