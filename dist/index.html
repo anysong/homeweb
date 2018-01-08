@@ -14,7 +14,10 @@
         <div class="xxx">
             index
         </div>
-        <img src="/dist/images/" alt="">
+        <img id="imgElement" style="width: 250px;height: auto;" src="/dist/images/thumb_IMG_5952_1024.jpg" alt="">
+
+        <img style="width: 250px;height: auto;" src="/dist/images/WechatIMG7.jpeg" alt="">
+        <div id="imgInfo"></div>
         <div style="display:none;" class="spec js-top-nav-outer" >
         <div class="zc-top-nav js-zc-top-nav">
     <div class="zc-top-nav-inner">
@@ -202,5 +205,21 @@
         <script type="text/javascript" src="/dist/js/lib/jquery.cookie.js"></script>
         <script type="text/javascript" src="/dist/js/lib/exif.js"></script>
         <script type="text/javascript" src="/dist/js/index/entrance.js"></script>
+        <script>
+            $(function(){
+                  console.log(EXIF);
+            var oBox = document.getElementById('imgInfo');
+
+            EXIF.getData(document.getElementById('imgElement'), function(){
+            EXIF.getAllTags(this);
+            EXIF.getTag(this, 'Orientation');
+            var data = EXIF.getAllTags(this);
+            console.log(data);
+            var str = EXIF.pretty(this);
+            console.log(str);
+            oBox.innerHTML = str;
+             });
+            });
+        </script>
     </body>
 </html>
