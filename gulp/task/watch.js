@@ -3,7 +3,7 @@ var watch = require("gulp-watch");
 
 gulp.task("watch", ["less","includer"], function(){
 	watch('./src/js/**/*.js',function(){
-		console.log('tt');
+		gulp.start("browserify");
 	});
 	watch('./src/css/**/*.less',function(){
 		gulp.start("less");
