@@ -1,7 +1,7 @@
 var gulp = require("gulp");
 var watch = require("gulp-watch");
 
-gulp.task("watch", ["less","includer"], function(){
+gulp.task("watch", ["browserify","less","includer"], function(){
 	watch('./src/js/**/*.js',function(){
 		gulp.start("browserify");
 	});

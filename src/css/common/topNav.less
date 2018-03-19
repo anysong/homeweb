@@ -164,19 +164,78 @@
     position: fixed;
     background-color: white;
     transition: background-color 0.3s ease-in-out, border-width 0.3s ease-in-out;
-    border-bottom: 1px solid @global-font-color;
+    border-bottom: 1px solid #e0e5eb;
     z-index: 10000;
+    .zc-top-nav-m-wrap {
+        width: 100%;
+        min-height: 50px;
+        //toggle
+        .switch-btn {
+            width: 20px;
+            height: 17px;
+            margin: 0px;
+            padding: 0px;
+            float: right;
+            cursor: pointer;
+            margin-right: 15px;
+            margin-top: 16px;
+            li {
+                width: 100%;
+                height: 2px;
+                margin-top: 5px;
+                border-radius: 1px;
+                background-color: #09aeb0;
+                transition: background-color 0.3s ease-in-out;
+                &:first-child {
+                    margin-top: 0px;
+                }
+            }
+        }
+        .register-link {
+            text-decoration: none;
+            display: block;
+            float: right;
+            height: 30px;
+            box-sizing: border-box;
+            width: 92px;
+            background-color: #09aeb0;
+            border-radius: 2px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 15px;
+            color: white;
+            margin-top: 10px;
+            margin-right: 26px;
+            transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        }
+    }
+    &.show {
+        .sub-nav {
+            opacity: 1;
+            height: auto;
+            min-height: auto;
+            border-top: 1px solid #e0e5eb;
+            display: block;
+            .sub-nav-ul {
+                .production-list {
+                    .sub-sub-nav {
+                        height: auto;
+                        min-height: 10px;
+                    }
+                }
+            }
+        }
+    }
+    //下拉列表
     .sub-nav {
         width: 100%;
-        // height: 0px;
-        height: auto;
+        height: 0px;
+        display: none;
         overflow: hidden;
         clear: both;
-        // opacity: 0;
-        opacity: 1;
+        opacity: 0;
         transition: opacity 0.3s ease-in-out;
         background-color: #f8f8f8;
-        margin-top: 10px;
         .sub-nav-ul {
             &::after {
                 content: " ";
@@ -243,7 +302,9 @@
             }
         }
     }
+
 }
+
 //小屏
 @media screen and (max-width: 960px){
     .zc-top-nav {

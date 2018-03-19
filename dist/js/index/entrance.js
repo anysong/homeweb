@@ -6,7 +6,30 @@ var init = function(){
 init();
 
 },{}],2:[function(require,module,exports){
+var expandBtn,$outer;
+var parseDOM = function(){
+    $expandBtn = $(".js-switch-btn");
+    $outer = $(".js-nav-outer");
+};
+var expandBtnBtnClickHandler = function() {
+    $outer.toggleClass("show");
+    $outer.parent().toggleClass("white");
+    $outer.parent().removeClass("spec");
+};
+var bindListener = function(){
+    $expandBtn.click(expandBtnBtnClickHandler);
+};
+
+var init = function(){
+    parseDOM();
+    bindListener();
+};
+
+init();
+
+},{}],3:[function(require,module,exports){
 require('../common/shence.js');
+require('../common/topNav.js');
 
 var init = function(){
     console.log('init');
@@ -14,4 +37,4 @@ var init = function(){
 
 init();
 
-},{"../common/shence.js":1}]},{},[2])
+},{"../common/shence.js":1,"../common/topNav.js":2}]},{},[3])
