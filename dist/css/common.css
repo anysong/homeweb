@@ -284,6 +284,11 @@
   display: block;
   padding-left: 16px;
 }
+@media screen and (max-width: 325px) {
+  .zc-top-nav {
+    display: none;
+  }
+}
 @media screen and (max-width: 960px) {
   .zc-top-nav {
     display: none;
